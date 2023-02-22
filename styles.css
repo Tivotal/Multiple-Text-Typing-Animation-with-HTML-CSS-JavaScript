@@ -1,0 +1,62 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #010718;
+  overflow: hidden;
+}
+
+.content {
+  width: 600px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.content .text {
+  color: #4070f4;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  white-space: nowrap;
+}
+
+.content .text.text-one {
+  color: #fff;
+  font-weight: 600;
+}
+
+.content .text.text-two::before {
+  content: "";
+  position: absolute;
+  background-color: #010718;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-left: 2px solid #4070f4;
+  animation: anim 4s steps(12) infinite;
+}
+
+@keyframes anim {
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+
+  100% {
+    left: 0%;
+  }
+}
